@@ -19,3 +19,5 @@
 
 # Do not ignore sealed YAML files.
 !*-sealed.yaml
+
+terraform/main.tf
