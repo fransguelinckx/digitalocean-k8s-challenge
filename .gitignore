@@ -21,3 +21,5 @@
 !*-sealed.yaml
 
 terraform/main.tf
+
+.idea/
