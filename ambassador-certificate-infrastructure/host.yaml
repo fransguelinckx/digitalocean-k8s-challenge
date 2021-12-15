@@ -1,0 +1,14 @@
+apiVersion: getambassador.io/v2
+kind: Host
+metadata:
+  name: wildcard-host
+  namespace: ambassador
+spec:
+  hostname: "*.otogone.be"
+  acmeProvider:
+    authority: none
+  tlsSecret:
+    name: otogone.be
+  selector:
+    matchLabels:
+      hostname: wildcard-host
