@@ -4,3 +4,4 @@ resources:
   - install.yaml
 patchesStrategicMerge:
   - disable-tls.yaml
+namespace: argocd
