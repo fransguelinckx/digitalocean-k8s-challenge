@@ -5,7 +5,6 @@ metadata:
   name: harbor
   namespace: flux-system
 spec:
-
   chart:
     spec:
       chart: harbor
