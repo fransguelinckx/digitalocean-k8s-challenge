@@ -23,3 +23,5 @@
 terraform/main.tf
 
 .idea/
+
+*_secrets.env
