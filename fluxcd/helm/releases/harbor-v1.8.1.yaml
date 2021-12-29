@@ -1,0 +1,33 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: harbor
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: harbor
+      sourceRef:
+        kind: HelmRepository
+        name: harbor
+      version: 1.8.1
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  releaseName: harbor
+  targetNamespace: harbor
+  interval: 1m0s
+  values:
+    replicaCount: 2
+    resources:
+      limits:
+        cpu: 1000m
+        memory: 600Mi
+      requests:
+        cpu: 200m
+        memory: 200Mi
