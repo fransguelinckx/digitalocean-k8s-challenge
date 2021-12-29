@@ -85,7 +85,7 @@ spec:
   - bindings:
     - ref: tekton-argocd-example-build-git-tb
     template:
-      name: tekton-argocd-example-build-tt
+      ref: tekton-argocd-example-build-tt
 
 ---
 
