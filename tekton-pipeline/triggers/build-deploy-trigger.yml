@@ -94,5 +94,6 @@ kind: Mapping
 metadata:
   name: tekton-argocd-example-build-el-mapping
 spec:
-  prefix: /tekton-argocd-example-build-mapping/
+  host: trigger.otogone.be
+  prefix: /
   service: el-tekton-argocd-example-build-el:8080
