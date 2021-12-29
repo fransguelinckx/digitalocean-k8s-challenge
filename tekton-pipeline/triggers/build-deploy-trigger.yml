@@ -12,7 +12,7 @@ spec:
     kind: PipelineResource
     metadata:
       name: git-app-repo-$(uid)
-      namespace: tekton-argocd-example
+      namespace: tekton-pipelines
       labels:
         pipeline: tekton
         deploy: argocd
@@ -29,7 +29,7 @@ spec:
     kind: PipelineResource
     metadata:
       name: image-registry-$(uid)
-      namespace: tekton-argocd-example
+      namespace: tekton-pipelines
       labels:
         pipeline: tekton
         deploy: argocd
@@ -43,7 +43,7 @@ spec:
     kind: PipelineRun
     metadata:
       generateName: tekton-argocd-example-build-deploy-pipeline-run-
-      namespace: tekton-argocd-example
+      namespace: tekton-pipelines
       labels:
         pipeline: tekton
         deploy: argocd
