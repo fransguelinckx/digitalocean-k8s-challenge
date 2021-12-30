@@ -27,8 +27,10 @@ Deploying argocd is again pretty straight forward when you follow their getting 
 Link to argocd: https://argocd.otogone.be
 
 ## tekton
-This last step was by far the most complex to understand and implement. [This blog post](https://medium.com/dzerolabs/installing-ambassador-argocd-and-tekton-on-kubernetes-540aacc983b9) helped a lot! In short I deployed 2 pipelines: 1 that gets triggered by a github webhook from [this repo](https://github.com/fransguelinckx/tekton-pipeline-example-app) and 1 that gets triggered by the first one to deploy the app that was built using argocd. After some trial and error I got it working, yay!
+This last step was by far the most complex to understand and implement. [This blog post](https://medium.com/dzerolabs/installing-ambassador-argocd-and-tekton-on-kubernetes-540aacc983b9) helped a lot! In short I deployed 2 pipelines: 1 that gets triggered by a github webhook from [this repo](https://github.com/fransguelinckx/tekton-pipeline-example-app) and 1 that gets triggered by the first one to deploy the app (2048 game) that was built, using argocd. After some trial and error I got it working, yay!
 In retrospect I like the cloud-nativeness of tekton and it certainly triggered my interest. Although it will still take some time to get used to the concepts and terminology of it.
+
+Link to the 2048 app: https://2048.otogone.be
 
 ## digital ocean
 A big thank you to the people of digital ocean for organizing and facilitating this k8s challenge 👏🏻! Had a lot of fun experimenting with their platform and tinkering with new technologies. 
