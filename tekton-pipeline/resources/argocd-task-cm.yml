@@ -5,6 +5,6 @@ metadata:
 data:
   # Replace ARGOCD_SERVER with your ArgoCD server name (see https://medium.com/dzerolabs/installing-ambassador-argocd-and-tekton-on-kubernetes-540aacc983b9)
   ARGOCD_SERVER: argocd-server.argocd.svc.cluster.local:80
-  ARGOCD_APPLICATION_NAME: tekton-pipeline-app
+  ARGOCD_APPLICATION_NAME: 2048-game-app
   ARGOCD_APPLICATION_REVISION: HEAD
 
