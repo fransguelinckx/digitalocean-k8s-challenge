@@ -25,4 +25,8 @@ Setup was easy, configuring a cluster-wide wildcard certificate took more of an 
 Deploying argocd is again pretty straight forward when you follow their getting started guide. Exposing the UI with an ambassador mapping took me some time because I had to figure out I had to disable TLS on argocd to prevent an endless redirect loop (ambassador -> argocd -> ambassador -> argocd -> ...). To train my new fluxcd skills, I backported the installation of argocd, the mapping and disabling TLS to fluxcd using a kustomization.
 
 ## tekton
-This last step was by far the most complex to understand and implement. [This blog post](https://medium.com/dzerolabs/installing-ambassador-argocd-and-tekton-on-kubernetes-540aacc983b9) helped a lot! In retrospect I like the cloud-nativeness of tekton, but it will still take some time to get used to the concepts and terminology of it.
+This last step was by far the most complex to understand and implement. [This blog post](https://medium.com/dzerolabs/installing-ambassador-argocd-and-tekton-on-kubernetes-540aacc983b9) helped a lot! In short I deployed 2 pipelines: 1 that gets triggered by a github webhook from [this repo](https://github.com/fransguelinckx/tekton-pipeline-example-app) and 1 that gets triggered by the first one to deploy the app that was built using argocd. After some trial and error I got it working, yay!
+In retrospect I like the cloud-nativeness of tekton and it certainly triggered my interest. Although it will still take some time to get used to the concepts and terminology of it.
+
+## digital ocean
+A big thank you to the people of digital ocean for organizing and facilitating this k8s challenge 👏🏻! Had a lot of fun experimenting with their platform and tinkering with new technologies. 
